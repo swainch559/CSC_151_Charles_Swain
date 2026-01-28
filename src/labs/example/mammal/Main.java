@@ -11,7 +11,7 @@ public class Main {
         Mammal myMammal = new Mammal();
 
         // 2. Call methods
-        System.out.println("--- Methods ---");
+        System.out.println("\n--- Methods ---");
         myMammal.run();
         myMammal.eat();
         myMammal.sleep();
@@ -21,5 +21,8 @@ public class Main {
         myMammal.nurseYoung();
         myMammal.groomSelf();
         myMammal.hunt();
+        myMammal.getMammalDetails();
+        System.out.println("\nStarting the sit command...");
+        myMammal.sit();
     }
 }

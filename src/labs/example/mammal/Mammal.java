@@ -14,7 +14,40 @@ public class Mammal {
     private double weight;
     private String habitat;
 
-    // 2.Methods (Public)
+    // 2. Constructor
+    public Mammal() {
+        this.hairColor = "Brown";
+        this.eyeColor = "Hazel";
+        this.bodyTemp = 98.6;
+        this.isHibernating = false;
+        this.weight = 45.5;
+        this.habitat = "Forest";
+    }
+
+    // 3. Methods
+    public void getMammalDetails() {
+        System.out.println("\n--- Mammal Details ---");
+        System.out.println("Hair Color: " + hairColor);
+        System.out.println("Eye Color: " + eyeColor);
+        System.out.println("Body Temp: " + bodyTemp);
+        System.out.println("Habitat: " + habitat);
+        System.out.println("Weight: " + weight + "kg");
+    }
+
+    public void sit() {
+        System.out.println("The mammal is now sitting...");
+        try {
+            Thread.sleep(15000); 
+        } catch (InterruptedException e) {
+            System.out.println("The sit was interrupted!");
+        }
+        stand();
+    }
+
+    public void stand() {
+        System.out.println("The mammal is no longer sitting. It is now standing and barking: Woof! Woof!");
+    }
+
     public void run() {
         System.out.println("The mammal is running.");
     }
