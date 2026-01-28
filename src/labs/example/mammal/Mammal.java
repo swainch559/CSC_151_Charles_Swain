@@ -5,6 +5,7 @@
  */
 package labs.example.mammal;
 public class Mammal {
+    
     // 1. Properties (Private)
     private String hairColor;
     private String eyeColor;
