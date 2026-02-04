@@ -1,6 +1,6 @@
 /*
 @author Charles Swain
-@date January 28, 2026
+@date February 4, 2026
 @purpose This calls the methods defined in the Mammal class.
  */
 package labs.example.mammal;
@@ -22,7 +22,11 @@ public class Main {
         myMammal.groomSelf();
         myMammal.hunt();
         myMammal.getMammalDetails();
-        System.out.println("\nStarting the sit command...");
+        System.out.println("\nStarts sitting...");
         myMammal.sit();
+        int leg1 = myMammal.walk(3);
+        int leg2 = myMammal.walk(4);
+        myMammal.navigate(leg1, leg2);
+        myMammal.displayNavigation();
     }
 }

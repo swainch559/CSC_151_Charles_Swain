@@ -1,6 +1,6 @@
 /*
 @author Charles Swain
-@date January 28, 2026
+@date February 4, 2026
 @purpose This defines a Mammal class.
  */
 package labs.example.mammal;
@@ -13,6 +13,8 @@ public class Mammal {
     private boolean isHibernating;
     private double weight;
     private String habitat;
+    private double totalDistance;
+    private double angleTheta;
 
     // 2. Constructor
     public Mammal() {
@@ -82,5 +84,24 @@ public class Mammal {
 
     public void hunt() {
         System.out.println("Searching for food.");
+    }
+
+    public int walk(int miles) {
+    System.out.println("The mammal walks " + miles + " miles.");
+    return miles;
+    }
+
+    public void navigate(int sideA, int sideB) {
+    this.totalDistance = Math.sqrt(Math.pow(sideA, 2) + Math.pow(sideB, 2));
+    double radians = Math.atan2(sideA, sideB); 
+    this.angleTheta = Math.toDegrees(radians);
+    }
+
+    public void displayNavigation() {
+    String formattedDistance = String.format("%.2f", totalDistance);
+    String formattedAngle = String.format("%.2f", angleTheta);
+    System.out.println("\n--- Movement Calculations Results ---");
+    System.out.println("Straight-line Distance: " + formattedDistance + " miles");
+    System.out.println("Angle at longest leg: " + formattedAngle + " degrees");
     }
 }
