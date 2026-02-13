@@ -1,12 +1,16 @@
 /*
 @author Charles Swain
-@date February 4, 2026
+@date February 12, 2026
 @purpose This defines a Mammal class.
  */
+
+// Directory path
 package labs.example.mammal;
+
+//Properties and methods of Mammal class
 public class Mammal {
     
-    // 1. Properties (Private)
+    // Properties
     private String hairColor;
     private String eyeColor;
     private double bodyTemp;
@@ -16,7 +20,7 @@ public class Mammal {
     private double totalDistance;
     private double angleTheta;
 
-    // 2. Constructor
+    // Constructor
     public Mammal() {
         this.hairColor = "Brown";
         this.eyeColor = "Hazel";
@@ -26,7 +30,7 @@ public class Mammal {
         this.habitat = "Forest";
     }
 
-    // 3. Methods
+    // Method to display mammal details
     public void getMammalDetails() {
         System.out.println("\n--- Mammal Details ---");
         System.out.println("Hair Color: " + hairColor);
@@ -36,6 +40,7 @@ public class Mammal {
         System.out.println("Weight: " + weight + "kg");
     }
 
+    // "Action" methods
     public void sit() {
         System.out.println("The mammal is now sitting...");
         try {
@@ -47,7 +52,7 @@ public class Mammal {
     }
 
     public void stand() {
-        System.out.println("The mammal is no longer sitting. It is now standing and barking: Woof! Woof!");
+        System.out.println("The mammal is no longer sitting. It is now standing");
     }
 
     public void run() {
@@ -91,12 +96,14 @@ public class Mammal {
     return miles;
     }
 
+    // Method to calculate straight-line distance and angle using the Pythagorean theorem and trigonometry
     public void navigate(int sideA, int sideB) {
     this.totalDistance = Math.sqrt(Math.pow(sideA, 2) + Math.pow(sideB, 2));
     double radians = Math.atan2(sideA, sideB); 
     this.angleTheta = Math.toDegrees(radians);
     }
 
+    // Method to display the results of the navigation calculations
     public void displayNavigation() {
     String formattedDistance = String.format("%.2f", totalDistance);
     String formattedAngle = String.format("%.2f", angleTheta);
