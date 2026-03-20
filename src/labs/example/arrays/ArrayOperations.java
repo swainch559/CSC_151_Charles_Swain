@@ -12,6 +12,8 @@ public class ArrayOperations {
 
     // Method to create and display a new array
     public void createNewArray(int defaultValue) {
+        
+        //Intialize an array with 10 elements and populate it with values starting from defaultValue
         int[] myArray = new int[10];
 
         for (int i = 0; i < myArray.length; i++) {
